@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Dashboard</title>
+  <link rel="icon" type="image/png" href="images/apple.png" sizes="48*48">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <script src="js/main.js"></script>
+</head>
+
+<body>  
+	<div id="wrap">
+		<div id="header">
+			Photographer's store
+		</div>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td width="180px">
+		<div id="main">
+			<div id="left_main">
+				<div id="home">
+					<a href="dashboard.html">Home</a>
+				</div>
+				<div id="mypage">
+					<a href="mypage.html">My Page</a>
+				</div>
+				<div id="category">
+					<select id="pick">
+						<option value="all" selected onclick="showOption(0)">Show all</option>
+						<option value="top" onclick="showOption(1);">Top Selling</option>
+						<option value="new" onclick="showOption(2);">New Arrivals</option>
+						<option value="recent" onclick="showOption(3);">Recently Viewed</option>
+					</select>
+				</div>
+				
+				<!--ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">My Page</a></li>
+					<li>
+						<select>
+							<option value="all" selected onclick="showOption(0)">Show all</option>
+							<option value="top" onclick="showOption(1);">Top Selling</option>
+							<option value="new" onclick="showOption(2);">New Arrivals</option>
+							<option value="recent" onclick="showOption(3);">Recently Viewed</option>
+						</select>
+					</li>
+				</ul-->
+				
+				<div id="pick_color">Pick color</div>
+				<div id="background_design">
+					<table style="text-align: left; width: 60%;" border="0" cellpadding="2" cellspacing="2" >
+						<tbody>
+							<tr>
+								<td style="vertical-align: top; background-color:#DCEDC8; cursor:pointer;" onclick="changeBackgroudColor(1);"><br>
+								</td>
+								<td style="vertical-align: top; background-color:#8BC34A; cursor:pointer;" onclick="changeBackgroudColor(2);"><br>
+								</td>
+							</tr>
+							<tr>
+								<td style="vertical-align: top; background-color:#26A69A; cursor:pointer;" onclick="changeBackgroudColor(3);"><br>
+								</td>
+								<td style="vertical-align: top; background-color:#B2DFDB; cursor:pointer;" onclick="changeBackgroudColor(4);"><br>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="pick_font">Pick font</div>
+				<div id="font_design">
+					<table style="text-align: left; width: 80%;" border="0" cellpadding="2" cellspacing="2" >
+						<tbody>
+							<tr height="30px">
+								<td style="vertical-align: middle; background-color:#EEEEEE; font-family:Arial; cursor:pointer;" onclick="changeFont(1);">Arial<br>
+								</td>
+							</tr>
+							<tr height="30px">
+								<td style="vertical-align: middle; background-color:#EEEEEE; font-family:Berlin Sans FB Demi; cursor:pointer;" onclick="changeFont(2);">Berlin Sans FB Demi<br>
+								</td>
+							</tr>
+							<tr height="30px">
+								<td style="vertical-align: middle; background-color:#EEEEEE; font-family:BernhardFashion BT; cursor:pointer;" onclick="changeFont(3);">BernhardFashion BT<br>
+								</td>
+							</tr>
+							<tr height="30px">
+								<td style="vertical-align: middle; background-color:#EEEEEE; font-family:Bauhaus 93; cursor:pointer;" onclick="changeFont(4);">Bauhaus 93<br>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			</td>
+	  
+			<td id="main_cell">
+			<div id="right_main">
+				<div id="top_area">
+					<div id="top_selling">
+						Top Selling<p>
+						<table style="text-align: left; width: 910px;" border="0" cellpadding="0" cellspacing="0" id="top_table">
+							<tbody>
+								<tr>
+									<td style="vertical-align: top;" border="0"><img src="images/one.jpg"> 
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/2.jpg">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/3.png">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/3.b.jpg">
+									</td>
+								</tr>
+								<tr>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Mountain
+										</div>
+										<div id="artist">
+											Peary Brown
+										</div>
+										<div id="price">
+											$50
+										</div>
+									</td>
+									<td></td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Jelly Fish
+										</div>
+										<div id="artist">
+											Henry Roy
+										</div>
+										<div id="price">
+											$100
+										</div>
+									</td>
+									<td></td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Building
+										</div>
+										<div id="artist">
+											Tom Black
+										</div>
+										<div id="price">
+											$350
+										</div>
+									</td>
+									<td></td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Seahorse
+										</div>
+										<div id="artist">
+											Shone shane
+										</div>
+										<div id="price">
+											$250
+										</div>
+									</td>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="new_area">
+					<div id="new_arrivals">
+						New Arrivals<p>
+						<table style="text-align: left; width: 910px;" border="0" cellpadding="0" cellspacing="0" id="new_table">
+							<tbody>
+								<tr>
+									<td style="vertical-align: top;"><img src="images/4.png"> 
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/5.jpg">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/6.jpg">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/6.b.jpg">
+									</td>
+								</tr>
+								<tr>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Black
+										</div>
+										<div id="artist">
+											Jimmy Shank
+										</div>
+										<div id="price">
+											$250
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Deer
+										</div>
+										<div id="artist">
+											Jessie Joe
+										</div>
+										<div id="price">
+											$190
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Bee
+										</div>
+										<div id="artist">
+											Andrew Jerome
+										</div>
+										<div id="price">
+											$100
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Cocktail
+										</div>
+										<div id="artist">
+											Emily Roy
+										</div>
+										<div id="price">
+											$120
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="recently_area">
+					<div id="recently_viewed">
+						Recently Viewed<p>
+						<table style="text-align: left; width: 910px;" border="0" cellpadding="0" cellspacing="0" id="recent_table">
+							<tbody>
+								<tr>
+									<td style="vertical-align: top;"><img src="images/7.jpg"> 
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/8.jpg">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/9.jpg">
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top;"><img src="images/9.b.jpg">
+									</td>
+								</tr>
+								<tr>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Light
+										</div>
+										<div id="artist">
+											Peay Matin
+										</div>
+										<div id="price">
+											$520
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Bottle
+										</div>
+										<div id="artist">
+											Jerome Fenny
+										</div>
+										<div id="price">
+											$430
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Beach
+										</div>
+										<div id="artist">
+											Lila Sam
+										</div>
+										<div id="price">
+											$220
+										</div>
+									</td>
+									<td>&nbsp;</td>
+									<td style="vertical-align: top; background:#FFFFFF;">
+										<div id="title">
+											Blue Sea
+										</div>
+										<div id="artist">
+											Hauly Wain
+										</div>
+										<div id="price">
+											$400
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			</td></tr></table>
+		</div>
+		
+		<div style="clear:both"></div>
+		<div id="footer">
+			by Yoonyoun Choi, Aathira Mathew, Joyce, Afaf, Andrii
+		</div>
+	</div>
+</body>
+</html>
