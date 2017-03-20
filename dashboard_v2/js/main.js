@@ -56,7 +56,7 @@ function changeBackgroudColor(option) {
 		default:
 			document.getElementById("header").style.backgroundColor="#B2DFDB";
 		break;
-	}
+	 }
 }
 
 function changeFont(option) {
