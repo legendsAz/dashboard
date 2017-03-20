@@ -75,3 +75,31 @@ function changeFont(option) {
 		break;
 	}
 }
+
+function loginVal(loginForm)
+{
+	var returnValue=true;
+	if(loginForm.username.value.length<5)
+	{
+			returnValue=false;
+			alert("Username must be atleast 5 characters long");
+			loginForm.username.value="";
+			loginForm.username.focus();
+			return returnValue;
+	}
+	if(loginForm.password.value.length<4)
+	{
+		returnValue=false;
+		alert("Password must be atleast 4 characters long.");
+		loginForm.password.value="";
+		loginForm.password.focus();
+		return returnValue;
+	}
+	if(returnValue!=false)
+		{
+			alert("Successful login");
+			window.open('dashboard.html');
+			return returnValue;
+		}
+	
+}

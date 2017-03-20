@@ -3,11 +3,12 @@
 <head>
 	<title>Login page</title>
 	<link rel = "stylesheet" type = "text/css" href = "css/style.css"></link>
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<div class = "container">
 		<img src = "images/userAvatar.png">
-		<form action = "dashboard.html" method = "get">
+		<form  action = "" onsubmit="return loginVal(this);" method = "get" name = "loginForm" >
 
 			<div class = "form-input">
 				<input type = "text" name = "username"
@@ -19,7 +20,7 @@
 				placeholder = "Enter Password" required>
 			</div>
 
-			<input class = "btn" type =  "submit" value = "Login">
+			<input class = "btn" type =  "submit" value = "Login" >
 		</form>
 		<form action = "register.html" method = "get">
 				<input class = "btn" type = "submit" value = "Register">
