@@ -5,6 +5,7 @@
    <title> my page </title>
    <link rel= "tansaction icon" href= "images/money_1571px_1202779_easyicon.net.png" size= "58x58">
    <link rel= "stylesheet" href= "styles/main.css">
+   <script language = "javascript" src="js/main.js" ></script>
  </head>
 
 <body>  
@@ -19,9 +20,9 @@
 <div>
 
 <h1> TRANSACTION HISTORY </h1>
-<form method= get>
+<form method= "get" name="transForm" onsubmit="return transVal();">
 <input type = "file" name = "upload image"
-				placeholder = "Upload Image" required> 
+				placeholder = "Upload Image" > 
 <input type = "text" name = "transaction"
 				placeholder = "Enter Transaction" required> 
 <input type = "text" name = "description"

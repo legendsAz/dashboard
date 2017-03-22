@@ -103,3 +103,26 @@ function loginVal(loginForm)
 		}
 	
 }
+
+
+function transVal()
+{
+
+	var trans = document.forms["transForm"]["transaction"].value;
+	
+	var reg1 = /^[A-Za-z0-9\,]+$/;
+	
+	if(reg1.test(trans) == false)
+	{
+		alert("Invalid Transaction date format!!!Only alphabets ,numbers ,comma and space allowed!!");
+		return false;
+	}
+	else
+	{
+		alert("Successful Entry!!");
+		return true;
+	}
+	
+}
+
+
