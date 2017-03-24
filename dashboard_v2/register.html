@@ -3,14 +3,23 @@
 <head>
 	<title>Registration page</title>
 	<link rel = "stylesheet" type = "text/css" href = "css/registerstyle.css"></link>
+	<script src = "js/regvalid.js"></script> 
 </head>
 <body>
 	<div class = "container">
 		<img src = "images/userAvatar.png">
-		<form action = "dashboard.html" method = "get">
+		<form action = "dashboard.html" method = "get" name = "vregistration" onsubmit = "return Validate()">
 
 			<div class = "form-input">
 				<input type = "text" name = "username" placeholder = "Enter Username" required>
+			</div>
+			
+			<div class = "form-input">
+				<input type = "text" name = "fname" placeholder = "Enter first name" required>
+			</div>
+			
+			<div class = "form-input">
+				<input type = "text" name = "lname" placeholder = "Enter last name" required>
 			</div>
 
 			<div class = "form-input">
@@ -19,7 +28,7 @@
 
 			<div class = "form-input">
 				<input type = "password" name = "password" placeholder = "Password" required> 
-			</div>
+			</div>			
 
 			<input class = "btn" type =  "submit" value = "Submit">
 		</form>
