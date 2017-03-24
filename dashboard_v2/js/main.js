@@ -105,45 +105,50 @@ function loginVal(loginForm)
 }
 
 
-function transVal()
+function Validate()
 {
-
-	var trans = document.forms["transForm"]["transaction"].value;
-	var desc = document.forms["transForm"]["description"].value;
-	var loc = document.forms["transForm"]["location"].value;
-	var amnt = document.forms["transForm"]["amount"].value;
+    var usernamer = document.forms["vregistration"]["username"].value;
+	var fnamer = document.forms["vregistration"]["fname"].value;
+	var lnamer = document.forms["vregistration"]["lname"].value;
+	var emailr = document.forms["vregistration"]["email"].value;
+	var passwordr = document.forms["vregistration"]["password"].value;
 	
-	var reg1 = /^[A-Za-z0-9\,]+$/;
-	var reg2 = /^[A-Za-z0-9_\-\ ]{10,}$/;
-	var reg3 = /^[A-Za-z0-9_\-\. ]+$/;
-	var reg4 = /^[\-\+]{1}\$[0-9]+\.[0-9]{2,2}$/;
+	var reg1 = /^[A-Za-z0-9_\- ]{5,}$/;
+	var reg2 = /^[A-Z][a-z0-9 ]{1,}$/;
+	var reg3 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	var reg4 = /^.*(?=.{4,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
 	
-	if(reg1.test(trans) == false)
+	if(reg1.test(usernamer) == false && usernamer.length <= 5)
 	{
-		alert("Invalid Transaction date format!!!Only alphabets ,numbers ,comma and space allowed!!");
+		alert("Invalid Username. Please enter a valid one!");
 		return false;
 	}
-	else if(reg2.test(desc) == false)
+	else if(reg2.test(fnamer) == false)
 	{
-		alert("Invalid Description format!!!Only alphabets ,numbers ,underscore, hyphen, and space allowed and should be atleast 10 characters long!!");
+		alert("Invalid First name. Please enter a valid one!");
 		return false;
 	}
-	else if(reg3.test(loc) == false)
+	else if(reg2.test(lnamer) == false)
 	{
-		alert("Invalid Location format!!!Only alphabets ,numbers ,underscore, hyphen, period and space allowed!!");
+		alert("Invalid Last name. Please enter a valid one!");
 		return false;
 	}
-	else if(reg4.test(amnt) == false)
+	else if(reg3.test(emailr) == false)
 	{
-		alert("Invalid amount format!!!Should have -/+ followed by $ and number!!");
+		alert("Invalid Email. Please enter a valid one!");
+		return false;
+	}
+	else if(reg4.test(passwordr) == false && passwordr.length <= 4) 
+	{
+		alert("Invalid Password. Please enter a valid one!");
 		return false;
 	}
 	else
 	{
-		alert("Successful Entry!!");
+		alert("Successfull");
 		return true;
 	}
-	
+
 }
 
 
